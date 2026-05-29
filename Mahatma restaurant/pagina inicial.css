@@ -1,0 +1,127 @@
+
+:root {
+      --cor-primaria: gold;
+      --cor-segundaria: rgb(111, 89, 15);
+      --cor-terciaria: rgb(62, 51, 0);
+      --cor-quaternaria: rgb(218, 203, 147);
+      --cor-branca: white;
+      --cor-preta: black;
+      --cor-fundo: rgb(234, 221, 172);
+      --cor-fontes: rgb(34, 34, 34);
+      --fonte-primaria: 'Cinzel', serif;
+      --fonte-segundaria: 'Cormorant Garamond', serif;
+}
+
+body {
+    margin: 0;
+    font-family: var(--fonte-primaria);
+    background-color: var(--cor-fundo);
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, #bfa046 0%, #fffbe6 100%);
+    padding: 20px 60px;
+    box-shadow: 0 4px 16px rgba(191, 160, 70, 0.08);
+}
+
+.menu {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--cor-segundaria);
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 8px #fffbe6;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #6d4c1c;
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 8px 18px;
+    border-radius: 24px;
+    transition: 
+        background 0.3s,
+        color 0.3s,
+        box-shadow 0.3s;
+}
+
+.menu ul li a:hover,
+.menu ul li a:focus {
+    background: var(--cor-fundo);
+    color: var(--cor-branca);
+    box-shadow: 0 2px 8px rgba(191, 160, 70, 0.15);
+}
+
+.menu ul li a:active {
+    background: var(--cor-terciaria);
+    color: var(--cor-branca);
+}
+
+.titulo {
+    text-align: center;
+    margin: 80px 0 40px;
+    font-size: 3.5rem;
+    color: var(--cor-segundaria);
+    text-shadow: 2px 2px 12px #fffbe6;
+    font-family: var(--fonte-primaria);
+}
+
+.descricao {
+    text-align: center;
+    margin: 0 0 40px;
+    font-size: 1.5rem;
+    color: var(--cor-fontes);
+    font-family: var(--fonte-segundaria);
+}
+
+.historia {
+    animation: fadeIn 1.5s ease-out;
+    max-width: 800px;
+    margin: 0 auto 80px;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: var(--cor-fontes);
+    font-family: var(--fonte-segundaria);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.prato-principal-img {
+    display: block;
+    margin: 40px auto 60px auto;
+    max-width: 220px;
+    width: 80%;
+    border-radius: 32px;
+    box-shadow:
+        0 0 60px 20px rgb(252, 189, 2), /* aura dourada */
+        0 4px 24px rgba(191, 160, 70, 0.15);     /* sombra suave */
+    position: relative;
+    background: transparent;
+    transition: box-shadow 0.3s;
+}
+
+.prato-principal-img:hover {
+    box-shadow:
+        0 0 90px 35px rgb(191, 161, 70),
+        0 8px 32px rgba(191, 160, 70, 0.25);
+}
